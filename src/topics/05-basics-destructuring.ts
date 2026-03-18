@@ -25,10 +25,16 @@ const audioPlayer: AudioPlayer = {
     }
 };
 
-const { song, volume, second, details: { author, year } } = audioPlayer;
+//const { song, volume, second /*details: { author, year } Una forma de desestructurar un objeto dentro de otro */ } = audioPlayer;
 
-console.log(song);
-console.log(volume);
-console.log(second);
-console.log(author);
-console.log(year);
+//console.log(song);
+//console.log(volume);
+//console.log(second);
+//console.log(author);
+//console.log(year);
+
+const dbz = ['Goku', 'Vegeta', 'Trunks'];
+const [p1, p2, p3] = dbz;
+console.log(p1);
+console.log(p2);
+console.log(p3);
