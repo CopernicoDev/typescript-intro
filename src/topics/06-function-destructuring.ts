@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
     price: number;
     name: string;
 }
@@ -22,7 +22,7 @@ interface TaxCalculationOptions {
     tax: number;
 }
 
-function taxCalculation({ products, tax }: TaxCalculationOptions): number[] {
+function taxCalculation({ products, tax }: TaxCalculationOptions): [number, number] {
     let total = 0;
     products.forEach(({ price }) => {
         total += price;
