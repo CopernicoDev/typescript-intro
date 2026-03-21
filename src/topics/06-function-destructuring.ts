@@ -22,7 +22,7 @@ interface TaxCalculationOptions {
     tax: number;
 }
 
-function taxCalculation({ products, tax }: TaxCalculationOptions): [number, number] {
+export function taxCalculation({ products, tax }: TaxCalculationOptions): [number, number] {
     let total = 0;
     products.forEach(({ price }) => {
         total += price;
