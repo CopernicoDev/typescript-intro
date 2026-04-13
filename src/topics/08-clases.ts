@@ -1,19 +1,25 @@
 class Person {
-    public name?: string;
-    public age?: number;
-    public profession?: string;
+    constructor(
+        public name: string,
+        public age: number,
+        public profession: string
+    ) { }
+}
 
-    constructor(name: string, age: number, profession: string) {
-        this.name = 'Nicolás';
-        this.age = 25;
-        this.profession = 'Developer';
+class Hero extends Person {
+    constructor(
+        public alterEgo: string,
+        public realName: string,
+        public kills: number = 0 // <- Inicializado correctamente o asignándole un valor por defecto
+    ) {
+        super(realName, kills, 'Superhéroe');
     }
 }
 
-const ironman = new Person('', 25, '');
+const ironman = new Person('Tony Stark', 45, 'Ingeniero');
 
-class Hero extends Person {
-
-}
+const spiderman = new Hero('Spiderman', 'Peter Parker', 0);
 
 console.log(ironman);
+console.log(spiderman);
+
